@@ -15,7 +15,8 @@ public class Player : MonoBehaviour
     [SerializeField] float paddingBottom;
     [SerializeField] float moveSpeed = 5f;
 
-    void Start() {
+    void Start()
+    {
         InitBounds();
     }
     void Update()
@@ -32,14 +33,16 @@ public class Player : MonoBehaviour
         transform.position = newPos;
     }
 
-    void OnMove(InputValue value){
-       rawInput = value.Get<Vector2>();
-       Debug.Log(rawInput);
+    void OnMove(InputValue value)
+    {
+        rawInput = value.Get<Vector2>();
+        Debug.Log(rawInput);
     }
 
-    void InitBounds(){
+    void InitBounds()
+    {
         Camera mainCamera = Camera.main;
-        minBounds = mainCamera.ViewportToWorldPoint(new Vector2(0,0));  //bottom left corner
-        maxBounds = mainCamera.ViewportToWorldPoint(new Vector2(1,1));  //top right corner
+        minBounds = mainCamera.ViewportToWorldPoint(new Vector2(0, 0));  //bottom left corner
+        maxBounds = mainCamera.ViewportToWorldPoint(new Vector2(1, 1));  //top right corner
     }
 }
