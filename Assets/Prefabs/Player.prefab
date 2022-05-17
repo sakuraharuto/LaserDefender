@@ -137,6 +137,8 @@ MonoBehaviour:
   health: 50
   hitEffect: {fileID: 1477180616890134811, guid: e3d8b9b2272df4a6c8feed0f646a326b, type: 3}
   useCameraShake: 1
+  isPlayer: 1
+  score: 0
 --- !u!114 &2472174551624925680
 MonoBehaviour:
   m_ObjectHideFlags: 0
